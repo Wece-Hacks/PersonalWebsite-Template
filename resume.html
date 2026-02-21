@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume • Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Your Name</a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a class="active" href="resume.html">Resume</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary" href="assets/resume.pdf" target="_blank" rel="noopener">Open PDF</a>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h1>Resume</h1>
+      <p class="muted">
+        You can embed the PDF below (nice for desktop) and also include a download button.
+      </p>
+
+      <div class="resume-actions">
+        <a class="btn btn-primary" href="assets/resume.pdf" target="_blank" rel="noopener">Open Resume PDF</a>
+        <a class="btn btn-ghost" href="assets/resume.pdf" download>Download</a>
+      </div>
+
+      <div class="pdf-frame" role="region" aria-label="Resume PDF preview">
+        <object data="assets/resume.pdf" type="application/pdf" width="100%" height="800">
+          <p class="muted">
+            PDF preview not supported in this browser.
+            <a href="assets/resume.pdf" target="_blank" rel="noopener">Click here to open it.</a>
+          </p>
+        </object>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© <span id="year"></span> Your Name</p>
+      <p class="muted"><a href="projects.html">See Projects</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

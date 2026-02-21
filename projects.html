@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects • Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Your Name</a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="projects.html">Projects</a></li>
+          <li><a href="resume.html">Resume</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary" href="index.html#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h1>Projects</h1>
+      <p class="muted">Copy a card, change the text, link your repo/demo. Keep each description short.</p>
+
+      <div class="project-grid">
+        <article class="card">
+          <div class="card-top">
+            <h2 class="card-title">FPGA Signed Multiplier</h2>
+            <span class="tag">SystemVerilog</span>
+          </div>
+          <p class="muted">
+            Implemented an add-shift signed multiplier with a small control FSM and verified correctness.
+          </p>
+          <ul class="bullets">
+            <li>8-bit 2’s complement support</li>
+            <li>Clean state transitions + test vectors</li>
+            <li>Runs on FPGA board</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Demo / Report</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h2 class="card-title">CTF Forensics Challenge</h2>
+            <span class="tag">Security</span>
+          </div>
+          <p class="muted">
+            Designed a beginner-friendly forensic puzzle using hidden data and simple tooling.
+          </p>
+          <ul class="bullets">
+            <li>Clear hints + clean solution path</li>
+            <li>Teaches file inspection fundamentals</li>
+            <li>Packaged for CTFd</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Writeup</a>
+            <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h2 class="card-title">Signal Processing Notes</h2>
+            <span class="tag">Python</span>
+          </div>
+          <p class="muted">
+            A small collection of notebooks explaining concepts like convolution and transforms with plots.
+          </p>
+          <ul class="bullets">
+            <li>Readable explanations</li>
+            <li>Visualizations</li>
+            <li>Reusable snippets</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Notebook</a>
+            <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© <span id="year"></span> Your Name</p>
+      <p class="muted"><a href="index.html">Back to Home</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
